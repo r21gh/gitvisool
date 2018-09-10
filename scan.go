@@ -20,7 +20,6 @@ func getDotFilePath() string {
 	}
 
 	dotFile := usr.HomeDir + "/.gogitlocalstats"
-
 	return dotFile
 }
 
@@ -59,7 +58,6 @@ func parseFileLinesToSlice(filePath string) []string {
 			panic(err)
 		}
 	}
-
 	return lines
 }
 
@@ -113,13 +111,12 @@ func scan(folder string) {
 	fmt.Printf("\n\nSuccessfully added\n\n")
 }
 
-// scanGitFolders returns a list of subfolders of `folder` ending with `.git`.
+// scanGitFolders returns a list of sub-folders of `folder` ending with `.git`.
 // Returns the base folder of the repo, the .git folder parent.
-// Recursively searches in the subfolders by passing an existing `folders` slice.
+// Recursively searches in the sub-folders by passing an existing `folders` slice.
 func scanGitFolders(folders []string, folder string) []string {
 	// trim the last `/`
 	folder = strings.TrimSuffix(folder, "/")
-
 	f, err := os.Open(folder)
 	if err != nil {
 		log.Fatal(err)

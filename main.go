@@ -15,6 +15,5 @@ func main() {
 		scan(folder)
 		return
 	}
-
 	stats(email)
 }
