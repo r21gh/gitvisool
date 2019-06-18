@@ -15,5 +15,6 @@ func main() {
 		scan(folder)
 		return
 	}
+	// stats is an internal function
 	stats(email)
 }
